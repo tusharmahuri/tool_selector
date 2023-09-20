@@ -1,0 +1,9 @@
+joblib
+jsonify
+flask
+numpy
+scikit-learn
+category_encoders
+wtforms
+flask_wtf
+pandas
