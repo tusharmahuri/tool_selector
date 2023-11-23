@@ -72,9 +72,9 @@ def index():
     return render_template('index.html', form=form)
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST', 'GET'])
 def predict():
-    # if request.method == 'POST':
+    if request.method == 'POST':
         for feature in input_features:
             print(feature, " : ", request.form.getlist(feature))
         input_values_map = {feature: request.form.getlist(feature) for feature in input_features}
@@ -96,7 +96,7 @@ def predict():
         return render_template("result.html", result=output_value, input_values_map=input_values_map,
                                features_map=features_map)
 
-    # return render_template('index.html')
+    return render_template('index.html')
 
 
 @app.route('/os/<web_browser>')
