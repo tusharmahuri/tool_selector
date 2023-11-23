@@ -2,11 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Automation Tool Selector</title>
+    <title>Test Automation Tool Recommender</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
 </head>
-<body style=" background: linear-gradient(35deg,rgb(0, 14, 51),rgb(0, 9, 37),black); font-family: 'Poppins',sans-serif;  " >
+<style>
+    .container-box {
+            background-image: url("static/MicrosoftTeams-image (11).png");
+            background-size: cover;
+            background-position: center;
+            /* Additional styles for the container */
+            width: 100%;
+            height: 400px;
+            /* Add any other desired styles */
+        }
+</style>
+<body style="background: linear-gradient(to top, #161515, #000000);
+            /* font-family: 'Poppins',sans-serif; */
+            /* letter-spacing: 1px;
+            word-spacing: 5px; */
+            "
+            >
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -17,57 +36,69 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-<nav class="navbar sticky-top bg-body-tertiary">
+
+<nav class="navbar navbar bg-body-dark navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="{{url_for('static', filename='new_logo_white_-removebg-preview.png')}}" alt="Bootstrap" width="120" height="40">
+            <img src="{{url_for('static', filename='new_logo_white_-removebg-preview.png')}}" alt="MOHS10" width="120" height="40">
         </a>
     </div>
 </nav>
-<div class="card" style="background: none; border: none; color: white;max-width: 80rem; ">
 
-  <div class="card-body">
-    <!-- <img src="./new_logo_black_-removebg-preview.png" class="rounded float-start" alt="..." width="300" height="150"> -->
-    <p class="card-text float-start"> </p>
-    <h3 class="card-text">Automation Tool Selector</h3>
-    <!-- <h6 class="card-text" style="padding-top: 2rem;">Is Selenium more suited for your use case? Or Should you consider Cypress/Sahipro/Appium? </h6> -->
-    <p class="card-text"><span>Is Selenium more suited for your use case? Or should you consider Cypress/Sahipro/Appium?</span> With so many automation tools available in the market, it can be quite overwhelming for test engineers and QA teams to choose the right one. But don’t you worry, Mohs10 got you covered!  Presenting our revolutionary “Automation Tool Selector” which uses advanced ML algorithms to recommend tools customized to your business requirements. With over 38 tools and their respective features used for model training, we select the best for you from a wide and varied range of options.</p>
 
-  </div>
-</div>
+   <div class="container-box  text-light py-4 wow fadeInUp" data-wow-delay="0.3s"
+   >
+        <div class="container pt-4" >
+            <div class="row g-5 pt-4">
+                <div class="col-lg-6 col-md-6">
+                    <h2 class="card-header  border-info  " style="color: #ffff; margin-bottom: 10px;" >Test Automation Tool Recommender</h2>
+                    <p class="mb-4" style="color: #ffff;font-size: 14px;">Hola Amigos! Is Selenium actually suited to your use case? Should you consider Cypress, Sahipro or Appium for your test automation? In this era of digitization, with new tools coming up every now and then, it can be quite overwhelming for QA teams to make the right decision. Hence, we envisioned the revolutionary “Test Automation Tool Recommender” which uses advanced ML algorithms to fine-tune your search and recommend tools customized to your business requirements. With over 38 tools and several significant parameters used for model training, we select the best for you from a wide and varied range of options.
+
+
+                       </p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
 <div style="display: flex; justify-content: center; padding-top: 2rem;">
 <div class="card border-light text-bg-dark" >
 
 
-<div class="container-fluid text-center" style="    background: linear-gradient(35deg,rgb(0, 14, 51),rgb(0, 9, 37),black) ; 	box-shadow: 5px 20px 50px #000000b7;  border-radius: 10px;" >
+<div class="container-fluid text-center" style="    background: linear-gradient(35deg,rgb(0, 14, 51),rgb(0, 9, 37),black) ; 	box-shadow: 5px 20px 50px #000000b7;  border-radius: 10px; width: 800px;" >
     <br>
-    <h2 class="card-header text-center border-info" >Automation Tool Selector</h2>
+    <p class="card-header text-center border-info  " style="color: #ffff;font-size: 18px;">Select your requirements from the drop-downs below :)</p>
     <br>
 <div class="card-body mb-6 justify-content-center" >
 
-    <form  method="POST" , action="https://tool-selector-mohs10.onrender.com/predict">
+    <form  method="POST" , action="https://tool-selector-mosh10.onrender.com/predict">
         <br>
         {{ form.csrf_token }}
 
         <div class="row justify-content-center" style="padding-top: 0.5rem;" >
 
-                <div class="col-12 col-sm-4" style="padding-top: 1rem;" >
-                    <label for="Web_Browser">Web Browser</label>
+                <div class="col-12 col-md-4" style="padding-top: 1rem;" >
+                    <label for="Web_Browser"><b>Web Browser</b></label>
                     <br>
-                    {{ form.Web_Browser(size=10, multiple=True) }}
+                    <br>
+                    {{ form.Web_Browser }}
                 </div>
 
-                <div class="col-12 col-sm-4"  style="padding-top: 1rem;">
-                    <label for="OS">Operating System</label>
+                <div class="col-12 col-md-4"  style="padding-top: 1rem;">
+                    <label for="OS"><b>Operating System</b></label>
                     <br>
-                    {{ form.OS(size=10, multiple=True) }}
+                    <br>
+                    {{ form.OS }}
                 </div>
 
 
-                <div class="col-12 col-sm-4" style="padding-top: 1rem;" >
-                    <label for="ProgramingLanguage_ToolSupports">Programing Language</label>
+                <div class="col-12 col-md-4" style="padding-top: 1rem;" >
+                    <label for="ProgramingLanguage_ToolSupports"><b>Scripting Language</b></label>
                     <br>
-                    {{ form.ProgramingLanguage_ToolSupports(size=10, multiple=True) }}
+                    <br>
+                    {{ form.ProgramingLanguage_ToolSupports }}
                 </div>
 
         </div>
@@ -76,21 +107,24 @@
         <div class="row justify-content-center" style="padding-top: 0.5rem;" >
 
                 <div class="col-12 col-sm-4" style="padding-top: 1rem;">
-                    <label for="Application_types">Application Type</label>
+                    <label for="Application_types"><b>Application Type</b></label>
                     <br>
-                    {{ form.Application_types(size=10, multiple=True) }}
+                    <br>
+                    {{ form.Application_types }}
                 </div>
 
                 <div class="col-12 col-sm-4" style="padding-top: 1rem;" >
-                    <label for="Reporting_Feature">Reporting Feature</label>
+                    <label for="Reporting_Feature"><b>Reporting Feature</b></label>
                     <br>
-                    {{ form.Reporting_Feature(size=10, multiple=True) }}
+                    <br>
+                    {{ form.Reporting_Feature }}
                 </div>
 
                 <div class="col-12 col-sm-4" style="padding-top: 1rem;" >
-                    <label for="Learning_Curve">Learning Curve</label>
+                    <label for="Learning_Curve"><b>Learning Curve</b></label>
                     <br>
-                    {{ form.Learning_Curve(size=10, multiple=True) }}
+                    <br>
+                    {{ form.Learning_Curve }}
                 </div>
 
         </div>
@@ -100,20 +134,23 @@
 
 
                 <div class="col-12 col-sm-4" style="padding-top: 1rem;">
-                    <label for="Tool_Type">Tool Type</label>
+                    <label for="Tool_Type"><b>Tool Type</b></label>
                     <br>
-                    {{ form.Tool_Type(size=10, multiple=True) }}
+                    <br>
+                    {{ form.Tool_Type }}
                 </div>
                 <div class="col-12 col-sm-4" style="padding-top: 1rem;" >
-                    <label for="used_by">Firm Size</label>
+                    <label for="used_by"><b>Firm Size</b></label>
                     <br>
-                    {{ form.used_by(size=10, multiple=True) }}
+                    <br>
+                    {{ form.used_by }}
                 </div>
 
                 <div class="col-12 col-sm-4" style="padding-top: 1rem;" >
-                    <label for="AI_Enabled">AI Enabled</label>
+                    <label for="AI_Enabled"><b>AI Enabled</b></label>
                     <br>
-                    {{ form.AI_Enabled(size=10, multiple=True) }}
+                    <br>
+                    {{ form.AI_Enabled }}
                 </div>
 
 
@@ -134,8 +171,112 @@
 </div>
 </div>
 </div>
+<script>
+        var web_browser_select = document.getElementById("Web_Browser");
+        var os_select = document.getElementById("OS");
+
+        web_browser_select.onchange = function()  {
+
+            web_browser = web_browser_select.value;
+
+            fetch('/os/' + web_browser).then(function(response) {
+
+                response.json().then(function(data) {
+                    var optionHTML = '';
+
+                    for (var os of data.OperatingSystems) {
+                        optionHTML += '<option value="' + os.id + '">' + os.name + '</option>';
+                    }
+
+                    os_select.innerHTML = optionHTML;
+                })
+
+            });
+            }
+
+        var programming_language_select = document.getElementById("ProgramingLanguage_ToolSupports");
+        var tool_type_select = document.getElementById("Tool_Type");
+
+        tool_type_select.onchange = function()  {
+
+            tool_type = tool_type_select.value;
+
+            fetch('/proglanguage/' + tool_type).then(function(response) {
+
+                response.json().then(function(data) {
+                    var optionHTML = '';
+
+                    for (var prog_language of data.ProgrammingLanguages) {
+                        optionHTML += '<option value="' + prog_language.id + '">' + prog_language.name + '</option>';
+                    }
+
+                    programming_language_select.innerHTML = optionHTML;
+                })
+
+            });
+        }
 
 
+
+
+</script>
+<div   class="container-fluid  text-light py-4 wow fadeInUp" data-wow-delay="0.3s" style="background-color: #2c2e2e; margin-top: 30px;" >
+    <div class="container pt-4">
+        <div class="row g-5 pt-4">
+            <div class="col-lg-12 col-md-6">
+                <h6 class="text-white mb-2">Note:</h6>
+                <p class="mb-4 "  style="font-size: 13px; " >  Web Browser: Represents the browsers that the tool supports.
+
+                    Operating System: Represents the OS that the tool supports.
+
+                   Scripting Language: Represents the language for your scripting.
+
+               Application Type: Represents the type of testing intended.
+
+                 Reporting Feature: Represents the format supported for reporting.
+
+                 Learning Curve: Represents the skills/expertise required for the team
+
+                 Tool Type: Denotes whether the tool is no code, low code or requires coding by the team.
+
+                Firm Type: Represents the size of the firm.
+
+                   AI-enabled: Denotes whether the tool is AI-enabled or not.
+                   </p>
+                   </p>
+                <h6 class="text-white mb-6 " style="margin-top:80px;">Disclaimer:</h6>
+                <p class="mb-4 "  style="font-size: 13px; "> This is to be noted that the ML model used for the tool doesn’t provide 100% accuracy.
+                    The aforementioned recommendations are for giving you the right direction in your testing journey. Discrepancies if
+                    any, Mohs10 is not to be held responsible for the same. Also to be noted is the fact that the recommendations by the tool are completely free from biases. We don’t promote any tool,
+                    whatsoever and provide you with neutral outputs.
+                   </p>
+            </div>
+               <div class="col-lg-3 col-md-6">
+                <p class="text-white mb-2" style="font-size:14px;">Follow us:</p>
+                <div class="d-flex">
+                    <a class="btn btn-md btn-primary btn-md-square rounded me-2 " href="https://twitter.com/Mohs10Tech"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-md btn-primary btn-md-square rounded me-2 " href="https://www.linkedin.com/company/mohs10-technologies/"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <button type="button" class="btn btn-md btn-primary btn-md-square rounded me-2" href="https://www.youtube.com/@mohs10technologies"><span class="bi bi-youtube"></span> </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid text-light py-3" style="background: #000000;" >
+    <div class="container">
+        <div class="row g-0">
+
+            <div class="col-md-12 text-right  text-md-end">
+                <p class="mb-0" style="font-size: 11px;text-align: right">Copyright © 2023 Mohs10 Technologies Pvt Ltd.</a><br>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
